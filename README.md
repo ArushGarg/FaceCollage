@@ -7,7 +7,7 @@ shot per person, and builds a shareable collage.
 ## Demo video
 
 Google Drive link (view-only, "Anyone with the link can view"):
-**[INSERT YOUR DRIVE LINK HERE]**
+**[https://drive.google.com/file/d/1ikMpTQW8VxREBTeFstLzFP5bVPzTvDFA/view?usp=sharing]**
 
 ## Build & run
 
