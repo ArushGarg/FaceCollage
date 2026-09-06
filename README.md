@@ -4,6 +4,11 @@ Native Android app (Kotlin) that processes a portrait video on-device, detects f
 identifies the same person across separate appearances, picks a strong representative
 shot per person, and builds a shareable collage.
 
+## Demo video
+
+Google Drive link (view-only, "Anyone with the link can view"):
+**[INSERT YOUR DRIVE LINK HERE]**
+
 ## Build & run
 
 1. Open the project root in Android Studio (Koala or newer) and let it sync — it will
@@ -19,11 +24,6 @@ shot per person, and builds a shareable collage.
 
 No backend, no network calls — everything (frame extraction, detection, embedding,
 clustering, collage rendering) runs on-device.
-
-## Demo video
-
-Google Drive link (view-only, "Anyone with the link can view"):
-**[INSERT YOUR DRIVE LINK HERE]**
 
 ## Pipeline
 
