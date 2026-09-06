@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Reading a user-picked video via SAF/photo picker needs no storage permission
+         on API 26+ when using ACTION_OPEN_DOCUMENT / PhotoPicker; kept minimal on purpose. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"
+        android:minSdkVersion="33" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Face Collage"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FaceCollage"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.FaceCollage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- FileProvider so the share sheet can hand a saved collage file to other apps -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>
